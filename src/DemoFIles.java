@@ -46,13 +46,14 @@ public class DemoFIles {
         Collections.sort(listOfFrequencies, new Comparator<Map.Entry<Character, Integer>>() {
             @Override
             public int compare(Map.Entry<Character, Integer> o1, Map.Entry<Character, Integer> o2) {
+                // this will sort "decreasingly" bacause of the order of the parameters
                 return Integer.compare(o2.getValue(), o1.getValue());
             }
         });
         System.out.println(listOfFrequencies);
 
 
-        // sorting based on keys
+        // sorting based on "lexicografic" order of the keys
         TreeMap<Character, Integer> sorted = new TreeMap<>(new Comparator<Character>() {
             @Override
             public int compare(Character o1, Character o2) {
