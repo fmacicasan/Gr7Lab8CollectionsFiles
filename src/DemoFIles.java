@@ -38,8 +38,10 @@ public class DemoFIles {
             }
 
         }
+        // original frequencies
         System.out.println(frequencies);
 
+        //sorting based on values
         ArrayList<Map.Entry<Character, Integer>> listOfFrequencies = new ArrayList<>(frequencies.entrySet());
         Collections.sort(listOfFrequencies, new Comparator<Map.Entry<Character, Integer>>() {
             @Override
@@ -50,6 +52,7 @@ public class DemoFIles {
         System.out.println(listOfFrequencies);
 
 
+        // sorting based on keys
         TreeMap<Character, Integer> sorted = new TreeMap<>(new Comparator<Character>() {
             @Override
             public int compare(Character o1, Character o2) {
