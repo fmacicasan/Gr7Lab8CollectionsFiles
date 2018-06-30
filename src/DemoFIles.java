@@ -10,7 +10,7 @@ public class DemoFIles {
         FileOperations fo = new FileOperationImpl1();
 
         List<String> poezie;
-        poezie = fo.readFromFileAsList("luc.txt");
+        poezie = fo.readFromFileAsList("luc2.txt");
 
       //  System.out.println(poezie.size());
 

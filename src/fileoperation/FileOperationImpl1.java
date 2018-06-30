@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FileOperationImpl1 implements FileOperations {
@@ -26,17 +27,17 @@ public class FileOperationImpl1 implements FileOperations {
     public String readFromFile(String fileName) {
         Path p = Paths.get(".", fileName);
         Charset c = Charset.forName("UTF-8");
-        List<String> content= null;
+        List<String> content = new ArrayList<>();
         try {
             content = Files.readAllLines(p,c);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        String rezultat="";
 
-        for (String s: content
-             ) {
+        String rezultat = "";
+
+        for (String s: content) {
             rezultat = rezultat+s+System.getProperty("line.separator");
         }
 
